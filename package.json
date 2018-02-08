@@ -7,9 +7,9 @@
     "url": "https://github.com/continuouscalendar/continuousCalendar"
   },
   "scripts": {
-    "test": "mocha-phantomjs src/test/jquery.continuousCalendar.spec.html?spec --reporter spec && eslint .",
+    "test": "mocha-phantomjs src/test/continuousCalendar.spec.html?spec --reporter spec && eslint .",
     "lint": "eslint .",
-    "buildBundle": "browserify src/bundleWrapper.js -o build/jquery.continuousCalendar-latest.js",
+    "buildBundle": "browserify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
     "watch": "watchify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
     "minifyBundle": "uglifyjs build/continuousCalendar-latest.js > build/continuousCalendar-latest-min.js",
     "prepublish": "npm run buildBundle && npm run minifyBundle"
