@@ -1,0 +1,12 @@
+*~
+
+# IDEA Project files
+
+*.ipr
+*.iml
+*.iws
+*.swp
+out/
+.sass-cache
+.idea
+.DS_Store
