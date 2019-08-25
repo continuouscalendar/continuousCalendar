@@ -45,7 +45,7 @@ describe('continuousCalendar', function() {
     })
 
     it('render week numbers', function() {
-      expect(cal().find('.week').text()).to.be.above(0)
+        expect(cal().find('.week').toArray().map(x => x.textContent).every(x => !isNaN(x))).to.equal(true)
     })
   })
 
