@@ -12,7 +12,8 @@
     "buildBundle": "browserify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
     "watch": "watchify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
     "minifyBundle": "uglifyjs build/continuousCalendar-latest.js > build/continuousCalendar-latest-min.js",
-    "prepublish": "npm run buildBundle && npm run minifyBundle"
+    "prepublish": "npm run buildBundle && npm run minifyBundle && npm run buildStyles",
+    "buildStyles": "lessc src/continuousCalendar.less src/jquery.continuousCalendar.css &&  lessc src/theme.rounded.less src/theme.rounded.css && lessc src/theme.transparent.less src/theme.transparent.css"
   },
   "keywords": [
     "calendar",
@@ -53,6 +54,7 @@
     "jquery": "^3.4.1"
   },
   "dependencies": {
-    "dateutils": "^0.3.1"
+    "dateutils": "^0.3.1",
+    "less": "^3.10.3"
   }
 }
