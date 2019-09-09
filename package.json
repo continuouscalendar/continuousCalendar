@@ -7,7 +7,7 @@
     "url": "https://github.com/continuouscalendar/continuousCalendar"
   },
   "scripts": {
-    "test": "mocha-phantomjs src/test/continuousCalendar.spec.html?spec --reporter spec && eslint .",
+    "test": "eslint . && mocha-chrome test/continuousCalendar.spec.html --chrome-flags='[\"--disable-web-security\"]' --reporter spec",
     "lint": "eslint .",
     "buildBundle": "browserify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
     "watch": "watchify src/bundleWrapper.js -o build/continuousCalendar-latest.js",
@@ -39,22 +39,19 @@
     "LICENSE-2.0.txt"
   ],
   "devDependencies": {
-    "almond": "~0.3.3",
     "browserify": "^16.5.0",
     "browserify-shim": "^3.8.14",
     "chai": "~4.2.0",
     "chai-jquery": "~2.1.0",
     "eslint": "^6.2.2",
+    "jquery": "^3.4.1",
+    "less": "^3.10.3",
     "mocha": "^6.2.0",
-    "mocha-phantomjs": "~4.1.0",
-    "phantomjs": "^2.1.7",
-    "requirejs": "~2.3.6",
+    "mocha-chrome": "^2.0.0",
     "uglify-js": "^3.6.0",
-    "watchify": "^3.11.1",
-    "jquery": "^3.4.1"
+    "watchify": "^3.11.1"
   },
   "dependencies": {
-    "dateutils": "^0.3.1",
-    "less": "^3.10.3"
+    "dateutils": "^0.3.1"
   }
 }

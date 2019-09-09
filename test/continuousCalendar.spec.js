@@ -1,3 +1,4 @@
+/* global expect, it, $, describe, ContinuousCalendar, beforeEach, before */
 var DateLocale
 var DateTime
 var DateFormat
@@ -45,7 +46,7 @@ describe('continuousCalendar', function() {
     })
 
     it('render week numbers', function() {
-        expect(cal().find('.week').toArray().map(x => x.textContent).every(x => !isNaN(x))).to.equal(true)
+      expect(cal().find('.week').toArray().map(x => x.textContent).every(x => !isNaN(x))).to.equal(true)
     })
   })
 
@@ -400,7 +401,7 @@ describe('continuousCalendar', function() {
       ContinuousCalendar(createCalendarFields({startDate: ''}), {
         firstDate: '4/26/2009',
         lastDate:  '5/2/2009',
-        executeCallback: function(container, selection, params) {
+        executeCallback: function() {
           window.callBackCalled++
         }
       })
@@ -409,7 +410,7 @@ describe('continuousCalendar', function() {
     })
 
     it('range calendar executes callback-function and triggers event when range is created or changed', function() {
-      function testFunction(container, range, params) {
+      function testFunction(container, range) {
         window.calendarContainer = container
         window.calendarCallBack = range.days()
         window.calendarChanged = container.querySelectorAll('.selected').length
@@ -647,7 +648,7 @@ describe('continuousCalendar', function() {
       var _selection
       var container = createCalendarFields({startDate: '4/29/2009'})
       ContinuousCalendar(container, {firstDate: '4/15/2009', lastDate: '5/12/2009',
-        executeCallback: function (container, selection, params) {
+        executeCallback: function (container, selection) {
           _container = container
           _selection = selection
         }})

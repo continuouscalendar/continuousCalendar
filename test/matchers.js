@@ -1,3 +1,4 @@
+/* global $ */
 var DateTime = window.DateTime
 var DateFormat = window.DateFormat
 

@@ -5,7 +5,7 @@ var elemsAsList = require('./util').elemsAsList
 var toggle = require('./util').toggle
 
 module.exports = function(container, calendarBody, executeCallback, locale, params, getElemDate, calendar, startDate, setStartField,
-                endDate, setEndField, calendarRange, disabledDatesList) {
+  endDate, setEndField, calendarRange, disabledDatesList) {
   var mouseDownDate = null
   var selection
   var Status = {
