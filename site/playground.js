@@ -30,7 +30,7 @@ function create() {
   //  container.append('<input type="hidden" class="startDate" value="' + $('#selectionStart').val() + '" /><input type="hidden" class="endDate" value="' + $('#selectionEnd').val() + '"/>')
   //}
   $('body').append(containerWrapper)
-  var optionsList = [ 'selectToday', 'disableWeekends', 'isPopup', 'weeksBefore', 'weeksAfter', 'firstDate', 'lastDate', 'minimumRange', 'selectWeek', 'disabledDates', 'fadeOutDuration', 'customScroll', 'allowClearDates', 'isRange', 'useIsoForInput' ]
+  var optionsList = [ 'selectToday', 'disableWeekends', 'isPopup', 'weeksBefore', 'weeksAfter', 'firstDate', 'lastDate', 'minimumRange', 'selectWeek', 'disabledDates', 'fadeOutDuration', 'allowClearDates', 'isRange', 'useIsoForInput' ]
   var options = {
     theme : $('[name=theme]:checked').val(),
     locale: DateLocale[$('[name=locale]:checked').val()]
@@ -44,7 +44,7 @@ function create() {
   }
   var params = JSON.stringify(options)
   containerWrapper.prepend('<textarea  class="example_params">$(selector).continuousCalendar(' + params + ')</textarea>')
-  container.continuousCalendar(options)
+  ContinuousCalendar(container.get(0), options)
   function valueOf(id) {
     var elem = $('#' + id)
     return elem.attr('type') == 'checkbox' ? elem.filter(':checked').length > 0 : elem.val()

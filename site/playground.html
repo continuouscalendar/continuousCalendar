@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="reset-min.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="styles.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="../src/main/jquery.continuousCalendar.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../src/main/theme.transparent.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../src/main/theme.rounded.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../src/jquery.continuousCalendar.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../src/theme.transparent.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../src/theme.rounded.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="playground.css" type="text/css" media="all"/>
     <style type="text/css" media="print">
         fieldset { display: none; }
@@ -52,7 +52,6 @@
         <label class="row"><input type="checkbox" value="" id="disableWeekends"/><span class="label">disableWeekends</span></label>
         <label class="row"><input type="checkbox" value="" checked="checked" id="isRange"/><span class="label">isRange</span></label>
         <label class="row"><input type="checkbox" value="" id="selectWeek"/><span class="label">selectWeek</span></label>
-        <label class="row"><input type="checkbox" value="" id="customScroll"/><span class="label">customScroll</span></label>
         <label class="row"><input type="checkbox" value="" id="allowClearDates"/><span class="label">allowClearDates</span></label>
     </div>
     <div class="col locales">
@@ -74,9 +73,11 @@
     <div style="clear:both;"></div>
     <button id="create">Create</button>
 </fieldset>
-<script type="text/javascript" src="../src/lib/jquery.min.js"></script>
-<script type="text/javascript" src="../src/main/jquery.tinyscrollbar-1.66/jquery.tinyscrollbar.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../build/jquery.continuousCalendar-latest.js" charset="UTF-8"></script>
+<script
+        src="//code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="../build/continuousCalendar-latest.js" charset="UTF-8"></script>
 <script type="text/javascript"  src="playground.js" charset="UTF-8"></script>
 <!--<script data-main="playground" type="text/javascript"  src="../node_modules/requirejs/require.js" charset="UTF-8"></script>-->
 </body>
