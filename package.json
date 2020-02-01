@@ -1,6 +1,6 @@
 {
   "name": "continuous-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Date picker and range selector with scrollable months instead of paged",
   "repository": {
     "type": "git",
