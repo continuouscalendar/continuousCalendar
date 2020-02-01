@@ -52,6 +52,6 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "dateutils": "^0.3.1"
+    "dateutils": "^0.5.1"
   }
 }
